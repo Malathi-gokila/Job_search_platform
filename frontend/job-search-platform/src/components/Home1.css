@@ -1,0 +1,12 @@
+.job-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .job-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 200px;
+  }
+  

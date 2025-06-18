@@ -1,0 +1,72 @@
+ /* Applied Jobs Container */
+.applied-jobs-container {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax Effect */
+  background-repeat: no-repeat;
+  color: white;
+  z-index: 0; /* Ensure other elements are above the background */
+}
+
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  justify-items: center;
+  margin-top: 20px;
+  position: relative; /* Ensure job-list stays above the background */
+  z-index: 1;
+}
+
+.job-card {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background for cards */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 250px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.job-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.job-card p {
+  font-size: 1em;
+  color: white;
+  margin: 8px 0;
+}
+
+.job-card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.job-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .job-list {
+    grid-template-columns: 1fr; /* 1 column on smaller screens */
+  }
+}

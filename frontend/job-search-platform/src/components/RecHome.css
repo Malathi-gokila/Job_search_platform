@@ -1,0 +1,76 @@
+   /* RecHome.css */
+
+   .rec-home-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-image: url('https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white; /* Make content readable on dark background */
+    z-index: 1;
+  }
+#rh1 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Updated job-list to display 3 cards per row */
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.job-card {
+  padding: 15px;
+  background: #f8f9fa;
+  border-left: 5px solid #007bff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #e9f2ff; 
+}
+
+.job-card h3 {
+  color: #007bff;
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.job-card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+
+/* Make the grid responsive */
+@media (max-width: 900px) {
+  .job-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards in a row on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .job-list {
+    grid-template-columns: repeat(1, 1fr); /* 1 card in a row for mobile */
+  }
+}

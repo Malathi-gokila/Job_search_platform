@@ -1,0 +1,20 @@
+.applicant-navbar {
+    color:black;
+    padding: 20px;
+  }
+  
+  .applicant-navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .applicant-navbar li {
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .applicant-navbar li:hover {
+    transform: translateY(-2px);
+  }

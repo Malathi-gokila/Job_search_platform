@@ -1,0 +1,143 @@
+.applicant-background {
+  position: relative;
+  min-height: 100vh; /* Ensure background covers the full viewport height */
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  background-repeat: no-repeat;
+  /* z-index: -1; */
+}
+
+.applicants-container {
+  position: relative;
+  z-index: 1; /* Ensure the content appears above the background */
+  padding: 20px;
+  overflow-y: auto; /* Allow the content to scroll */
+  height: 100vh; /* Set the height to 100% of the viewport */
+}
+
+.job-cards, .applicants-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.job-cards {
+  grid-template-columns: 1fr;
+}
+
+
+@media (min-width: 640px) {
+  .job-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .job-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.applicants-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 1.5rem; /* Gap between the items */
+}
+
+.applicant-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%; /* Cards should take full width of their grid cell */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.applicant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.applicant-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.applicant-details {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.resume-link {
+  color: #3b82f6;
+  text-decoration: underline;
+  margin-top: 1rem;
+  display: block;
+}
+
+.select-button {
+  margin-top: 1rem;
+  background-color: #28a745;
+  color: white;
+  padding: 0.65rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  width:50%;
+}
+
+.reject-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width:50%;
+}
+
+.reject-button:hover {
+  background-color: #ff1a1a;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .applicant-background {
+    background-attachment: scroll; /* Remove fixed for mobile */
+  }
+}
+
+@media (max-width: 1024px) {
+  .applicants-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .applicants-grid {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}
+
+.profile-link {
+  width:50%;
+}

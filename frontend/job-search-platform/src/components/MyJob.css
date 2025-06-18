@@ -1,0 +1,33 @@
+/* Container for job cards */
+.job-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns */
+  gap: 50px; /* Space between cards */
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Styling for each job card */
+.job-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  /* background-color: #f4f4f4; */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Ensure each card takes the full width of its grid cell */
+}
+
+/* Hover effect for job card */
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile view - Stack cards in a single column */
+@media (max-width: 768px) {
+  .job-cards {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+  }
+}

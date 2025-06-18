@@ -1,0 +1,101 @@
+/* Parallax Background */
+.app-home-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: url('https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax Effect */
+  background-repeat: no-repeat;
+  color: white;
+  z-index: -1;
+}
+
+nav {
+  padding: 10px;
+}
+
+nav ul {
+  font-family: monospace, sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:white;
+  background-color: #000000;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color:white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+nav ul li button:hover {
+  color: red;
+  background-color: transparent;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.app-home-container {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.job-card {
+  color: white; /* Change text color to white for contrast */
+  border: 1px solid #ccc;
+  background: rgba(0, 0, 0, 0.7) !important; /* Ensure background is applied */
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .job-card {
+    width: calc(50% - 20px); /* Adjusting for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .job-card {
+    width: 100%; /* Stack job cards vertically on very small screens */
+  }
+}
