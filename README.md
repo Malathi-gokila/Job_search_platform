@@ -69,7 +69,7 @@ This project was developed using the **Agile methodology**, specifically the Scr
    npm install
     
    # Frontend
-   cd ../frontend
+   cd frontend
    npm install
 
 3. Configure Environment Variables:
@@ -85,7 +85,7 @@ This project was developed using the **Agile methodology**, specifically the Scr
    npm start
     
    # Start frontend
-   cd ../frontend
+   cd frontend
    npm run dev
 6. Open your browser and navigate to your localhost
 
