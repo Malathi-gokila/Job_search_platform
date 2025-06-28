@@ -63,6 +63,7 @@ This project was developed using the **Agile methodology**, specifically the Scr
    git clone https://github.com/yourusername/job-search-platform.git
    cd job-search-platform
 2. Install Dependencies:
+   '''bash
    # Backend
    cd backend
    npm install
@@ -70,12 +71,12 @@ This project was developed using the **Agile methodology**, specifically the Scr
    # Frontend
    cd ../frontend
    npm install
-3. Configure Environment Variables:
+4. Configure Environment Variables:
    MONGODB_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret
    RESEND_API_KEY=your_resend_api_key
    PORT=port_number
-4. Start Backend and Frontend servers:
+5. Start Backend and Frontend servers:
    # Start backend
    cd backend
    npm start
@@ -83,7 +84,7 @@ This project was developed using the **Agile methodology**, specifically the Scr
    # Start frontend
    cd ../frontend
    npm run dev
-5. Open your browser and navigate to your localhost
+6. Open your browser and navigate to your localhost
 
 
 
